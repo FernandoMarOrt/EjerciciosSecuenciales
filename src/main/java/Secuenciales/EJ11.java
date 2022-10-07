@@ -22,7 +22,8 @@ public class EJ11 {
         final double PI = Math.PI; //Igualo la variable PI al valor de PI
         
         double semicirculoArea = (PI * Math.pow(valorR, 2))/2; //Calculo la area del semicirculo
-        double trianguloArea = ((valorR * 2) * valorH)/2; //Calculo el area del triangulo
+        double trianguloAltura = Math.sqrt(Math.pow(valorH, 3) - Math.pow(valorR, 2)); //Calculo la altura del triangulo
+        double trianguloArea = ((valorR * 2) * trianguloAltura)/2; //Calculo el area del triangulo
         double areaTotal = semicirculoArea + trianguloArea; //Sumo las 2 areas para determinar el area total de la figura
               
         //Muestro la solucion por una pantalla de texto y le aplica el Math.round para que salgan solo 2 decimales
